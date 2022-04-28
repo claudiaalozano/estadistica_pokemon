@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 import random
+
+
 def añadir_columna():
     df = pd.read_csv('Pokemon.csv')
     df = df.drop(['#'], axis=1)
@@ -22,7 +24,6 @@ def añadir_columna():
     df.to_csv('Pokemon_modificado.csv', index=False)
 añadir_columna()
 
-
 def analisis_dataset():
     df = pd.read_csv('Pokemon.csv')
     df = df.drop(['#'], axis=1)
@@ -38,7 +39,6 @@ def analisis_dataset():
     df = df.drop(['Sp. Def'], axis=1)
     df = df.drop(['Speed'], axis=1)
 analisis_dataset()
-
 
 def percentiles():
     df = pd.read_csv('Pokemon.csv')
@@ -58,7 +58,6 @@ def percentiles():
     df.describe(percentiles=[.68, .95, .97])
 percentiles()
 
-
 def media_total():
     df = pd.read_csv('Pokemon.csv')
     df = df.drop(['#'], axis=1)
@@ -74,7 +73,6 @@ def media_total():
     df = df.drop(['Speed'], axis=1)
     df['Total'].mean()
 media_total()
-
 
 def mediana_moda_total():
     df = pd.read_csv('Pokemon.csv')
@@ -92,7 +90,6 @@ def mediana_moda_total():
     df['Total'].median()
     df['Total'].mode()
 mediana_moda_total()
-
 
 def varianza_desviacion_estandar():
     df = pd.read_csv('Pokemon.csv')
@@ -115,7 +112,7 @@ sample_data = random.normal("media", "desviacion", size=1000)
 plt.hist(sample_data)
 plt.show()
 
-#mostrar gráfico de barras de Pokemon.csv
+#gráfico de barras
 df = pd.read_csv('Pokemon.csv')
 df = df.drop(['#'], axis=1)
 df = df.drop(['Type 2'], axis=1)
