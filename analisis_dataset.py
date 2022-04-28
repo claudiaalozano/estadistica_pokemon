@@ -97,7 +97,23 @@ def mediana_moda_total():
     df['Total'].mode()
 mediana_moda_total()
 
-
+#función que calcule la varianza y la desviación estándar de Pokemon.csv
+def varianza_desviacion_estandar():
+    df = pd.read_csv('Pokemon.csv')
+    df = df.drop(['#'], axis=1)
+    df = df.drop(['Type 2'], axis=1)
+    df = df.drop(['Generation'], axis=1)
+    df = df.drop(['Legendary'], axis=1)
+    df = df.drop(['Name'], axis=1)
+    df = df.drop(['Total'], axis=1)
+    df = df.drop(['HP'], axis=1)
+    df = df.drop(['Attack'], axis=1)
+    df = df.drop(['Defense'], axis=1)
+    df = df.drop(['Sp. Atk'], axis=1)
+    df = df.drop(['Sp. Def'], axis=1)
+    df = df.drop(['Speed'], axis=1)
+    df['Total'].var()
+    df['Total'].std()
 
 sample_data = random.normal("media", "desviacion", size=1000)
 plt.hist(sample_data)
