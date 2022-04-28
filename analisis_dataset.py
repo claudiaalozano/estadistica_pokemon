@@ -62,4 +62,37 @@ def percentiles():
     df.describe(percentiles=[.68, .95, .97])
 percentiles()
 
-#
+# funcion que haga la media de la columna Total de Pokemon.csv
+def media_total():
+    df = pd.read_csv('Pokemon.csv')
+    df = df.drop(['#'], axis=1)
+    df = df.drop(['Type 2'], axis=1)
+    df = df.drop(['Generation'], axis=1)
+    df = df.drop(['Legendary'], axis=1)
+    df = df.drop(['Name'], axis=1)
+    df = df.drop(['HP'], axis=1)
+    df = df.drop(['Attack'], axis=1)
+    df = df.drop(['Defense'], axis=1)
+    df = df.drop(['Sp. Atk'], axis=1)
+    df = df.drop(['Sp. Def'], axis=1)
+    df = df.drop(['Speed'], axis=1)
+    df['Total'].mean()
+media_total()
+
+#función que calcule la mediana y la moda de la columna Total de Pokemon.csv
+def mediana_moda_total():
+    df = pd.read_csv('Pokemon.csv')
+    df = df.drop(['#'], axis=1)
+    df = df.drop(['Type 2'], axis=1)
+    df = df.drop(['Generation'], axis=1)
+    df = df.drop(['Legendary'], axis=1)
+    df = df.drop(['Name'], axis=1)
+    df = df.drop(['HP'], axis=1)
+    df = df.drop(['Attack'], axis=1)
+    df = df.drop(['Defense'], axis=1)
+    df = df.drop(['Sp. Atk'], axis=1)
+    df = df.drop(['Sp. Def'], axis=1)
+    df = df.drop(['Speed'], axis=1)
+    df['Total'].median()
+    df['Total'].mode()
+mediana_moda_total()
