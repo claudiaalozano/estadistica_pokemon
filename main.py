@@ -243,3 +243,25 @@ if __name__ == "__main__":
 
 
 # EOF
+
+import analisis_dataset
+import repartir_pokemons
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error
+
+# funcion para ejecutar analisis_dataset y repartir_pokemons
+def main():
+    # ejecutar analisis_dataset
+    analisis_dataset.main()
+    # ejecutar repartir_pokemons
+    repartir_pokemons.main()
+main()
+
