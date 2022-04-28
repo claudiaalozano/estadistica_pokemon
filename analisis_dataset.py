@@ -96,3 +96,10 @@ def mediana_moda_total():
     df['Total'].median()
     df['Total'].mode()
 mediana_moda_total()
+
+
+
+sample_data = random.normal("media", "desviacion", size=1000)
+plt.hist(sample_data)
+plt.show()
+
